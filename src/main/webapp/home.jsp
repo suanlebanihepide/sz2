@@ -12,9 +12,9 @@
     <title>化学妙妙屋</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="./css/assets3/css/main.css"/>
+    <link rel="stylesheet" href="/sz/css/assets3/css/main.css"/>
     <noscript>
-        <link rel="stylesheet" href="./css/assets3/css/noscript.css"/>
+        <link rel="stylesheet" href="/sz/css/assets3/css/noscript.css"/>
     </noscript>
 </head>
 <body>
@@ -24,12 +24,12 @@
         <p>在这里你可以自己动手做你想做的化学实验<br/>
             你可以学到许多新的化学知识 </p>
         <ul class="actions">
-            <li><a href="login.jsp" class="button primary icon solid fa-download">注册账号</a></li>
+<%--            <li><a href="login.jsp" class="button primary icon solid fa-download">注册账号</a></li>--%>
             <li><a href="#one" class="button icon solid fa-chevron-down scrolly">了解更多</a></li>
         </ul>
     </div>
     <div class=" image phone">
-        <div class="inner"><img src="./images/welcome_background.gif" alt=""/>
+        <div class="inner"><img src="/sz/images/welcome_background.gif" alt=""/>
         </div>
     </div>
 </header>
@@ -51,7 +51,7 @@
 <section id="two" class="wrapper">
     <div class="inner alt">
         <section class="spotlight">
-            <div class="image"><img src="./images/room.jpg" alt=""/></div>
+            <div class="image"><img src="/sz/images/room.jpg" alt=""/></div>
             <div class="content">
                 <h3>化学实验室</h3>
                 <p>在这里你将会进入一个虚拟的实验室中，你可以随心所欲去做任何你想到的化学实验不会有任何的危险，亲身体会到动手做实验的快乐</p>
@@ -59,15 +59,15 @@
             </div>
         </section>
         <section class="spotlight">
-            <div class="image"><img src="./images/lesson_home.jpg" alt=""/></div>
+            <div class="image"><img src="/sz/images/lesson_home.jpg" alt=""/></div>
             <div class="content">
                 <h3>化学小课堂</h3>
                 <p>在这里我们将为你提供有趣的化学故事，有趣的化学的反应，你还可以看到各种种类的化学器材和药品，以及能够不断提高你化学知识的小测验</p>
-                <a href="" class="button">前往</a>
+                <a href="/sz/user/class" class="button">前往</a>
             </div>
         </section>
         <section class="spotlight">
-            <div class="image"><img src="./images/wuzhi.gif" alt=""/></div>
+            <div class="image"><img src="/sz/images/wuzhi.gif" alt=""/></div>
 
             <div class="content">
                 <h3>化学物质</h3>
@@ -80,7 +80,7 @@
             <ul class="icons labeled">
                 <li><span class="icon solid fa-code"><span class="label"><a href="">联系我们</a></span></span></li>
                 <li><span class="icon solid fa-desktop"><span class="label"> <a
-                        href="">关于我们</a> </span></span></li>
+                        href="about.jsp">关于我们</a> </span></span></li>
             </ul>
         </section>
     </div>
@@ -100,12 +100,12 @@
 </footer>
 
 <!-- Scripts -->
-<script src="./css/assets3/js/jquery.min.js"></script>
-<script src="./css/assets3/js/jquery.scrolly.min.js"></script>
-<script src="./css/assets3/js/browser.min.js"></script>
-<script src="./css/assets3/js/breakpoints.min.js"></script>
-<script src="./css/assets3/js/util.js"></script>
-<script src="./css/assets3/js/main.js"></script>
+<script src="/sz/css/assets3/js/jquery.min.js"></script>
+<script src="/sz/css/assets3/js/jquery.scrolly.min.js"></script>
+<script src="/sz/css/assets3/js/browser.min.js"></script>
+<script src="/sz/css/assets3/js/breakpoints.min.js"></script>
+<script src="/sz/css/assets3/js/util.js"></script>
+<script src="/sz/css/assets3/js/main.js"></script>
 
 
 </body>

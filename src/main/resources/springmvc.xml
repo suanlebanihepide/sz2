@@ -29,4 +29,11 @@
     <!--开启SpringMVC注解支持-->
     <mvc:annotation-driven />
 
+<!--    配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/sz/user/**"/>
+            <bean class="cn.itcast.interceptor.SysInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

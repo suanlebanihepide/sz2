@@ -9,9 +9,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>化学妙妙屋</title>
+    <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
 </head>
-<body>
-登录错误
+<body style="background-image: url(/sz/images/background.png)">
+<br><br><br>
+<div class="container">
+    <div class="text-center">
+         <h1>登录失败</h1>
+        <a href="/sz/login.jsp">重新登录</a>
+    </div>
+</div>
 </body>
 </html>

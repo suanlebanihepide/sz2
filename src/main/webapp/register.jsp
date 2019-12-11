@@ -52,7 +52,7 @@
                         化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
                     <ul class="dropdown-menu  " role="menu">
                         <li><a href="show_qicai.jsp" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
-                        <li><a href="test_page1.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
+                        <li><a href="class.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
                         <li><a href="knowledge.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
                         <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
                         <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小课堂</span></a></li>
@@ -66,11 +66,11 @@
     </div>
 </nav>
 <br><br><br><br><br><br>
-<div class="container">
+<div class="container ">
     <h1>新用户注册</h1>
     <br><br>
     <div style="width: 300px">
-    <form action="/user/createUser">
+    <form action="user/createUser" method="post">
 
         <div class="form-group">
             <label >用户名:</label>

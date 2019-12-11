@@ -18,7 +18,7 @@
     <h1>化学妙妙屋</h1>
     <br><br><br>
 
-    <p><a class="btn btn-primary btn-lg" href="home.jsp" role="button">Learn more</a></p>
+    <p><a class="btn btn-primary btn-lg" href="login.jsp" role="button">Learn more</a></p>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 </body>

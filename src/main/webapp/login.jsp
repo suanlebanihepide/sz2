@@ -12,9 +12,9 @@
     <title>化学妙妙屋</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="./css/assets/css/main.css"/>
+    <link rel="stylesheet" href="/sz/css/assets/css/main.css"/>
     <noscript>
-        <link rel="stylesheet" href="./css/assets/css/noscript.css"/>
+        <link rel="stylesheet" href="/sz/css/assets/css/noscript.css"/>
     </noscript>
 </head>
 <body>
@@ -25,18 +25,20 @@
     <!-- Main -->
     <section id="main">
         <header>
-            <span class="avatar"><img src="./images/zkh.jpg" height="160"/></span>
+            <span class="avatar"><img src="/sz/images/zkh.jpg" height="160"/></span>
             <h1>化学妙妙屋</h1>
         </header>
         <footer>
-            <form action="/user/test">
+            <form action="/sz/user/test" method="post">
 
+                <div style="color: red">${error}</div>
                 <div>Username: <label>
                     <input type="text" name="username">
                 </label></div>
                 <div>Password: <label>
                     <input type="password" name="password">
                 </label></div>
+                <div><a href="forgetPassword.jsp">忘记密码</a></div>
                 <br><br>
                 <input type="submit" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="register.jsp">注册</a>

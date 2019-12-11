@@ -10,12 +10,12 @@
 <html>
 <head>
     <title>化学妙妙屋</title>
-    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
-    <script src="./css/bootstrap/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
+    <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 
-    <script src="./css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body style="background-image: url(./images/background.png)">
+<body style="background-image: url(/sz/images/background.png)">
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -31,11 +31,14 @@
                 </li>
 
                 <li class="dropdown ">
-                    <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true" data-toggle="dropdown">
+                    <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true"
+                       data-toggle="dropdown">
                         化学物质 &nbsp&nbsp&nbsp&nbsp<span class="caret"></span> </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="index.html" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
-                        <li><a href="index.html" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a></li>
+                        <li><a href="index.html" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span>
+                        </a></li>
+                        <li><a href="index.html" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -44,26 +47,32 @@
                        data-toggle="dropdown">
                         化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
                     <ul class="dropdown-menu  " role="menu">
-                        <li><a href="show_qicai.jsp" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
-                        <li><a href="test_page1.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
-                        <li><a href="knowledge.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
-                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
-                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小课堂</span></a></li>
+                        <li><a href="show_qicai.jsp" data-tab="tab-chrome"><span
+                                style="font-size: 18px">化学器材展示</span></a></li>
+                        <li><a href="class.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a>
+                        </li>
+                        <li><a href="knowledge.jsp" data-tab="tab-firefox"><span
+                                style="font-size: 18px">化学知识科普</span></a></li>
+                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a>
+                        </li>
+                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小课堂</span></a>
+                        </li>
 
                     </ul>
                 </li>
 
-                <li><a href="about.jsp" class="navbar-brand">关于我们&nbsp&nbsp&nbsp&nbsp</a></li>
+                <li><a href="/sz/user/about" class="navbar-brand">关于我们&nbsp&nbsp&nbsp&nbsp</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<br><br><br>
 <div class="container">
     <h2 class="text-center"><strong>关于我们</strong></h2>
     <div></div>
 </div>
 <br><br><br>
-<div class="center-block">
+<div class="center-block container">
     <div id="slidershow" class="carousel slide" data-ride="carousel" data-interval=2000 data-pause="hover"
          data-wrap="true" style="margin-top: 5rem; width: 50%;height: 50%; margin-left:auto; margin-right:auto;">
         <!-- 设置图片轮播的顺序 -->
@@ -77,7 +86,7 @@
         <!--设置轮播的图片-->
         <div class="carousel-inner">
             <div class="item active center-block">
-                <a href="##"><img class="img-circle text-center center-block" src="./images/user/sz.jpg" alt="cat1"
+                <a href="##"><img class="img-circle text-center center-block" src="/sz/images/user/sz.jpg" alt="cat1"
                                   height="128px"></a>
                 <div class="text-center">
                     <h2>经理--沈政</h2>
@@ -87,21 +96,21 @@
             </div>
 
             <div class="item">
-                <a href="##"><img class="img-circle center-block" src="./images/user/zkh.jpg" alt="cat2"></a>
+                <a href="#"><img class="img-circle center-block" src="/sz/images/user/zkh.jpg" alt="cat2"></a>
                 <div class="text-center">
                     <h2>打工仔--张康衡</h2>
                     <p>团队骨干，文档编辑，思路设计，结构设计</p>
                 </div>
             </div>
             <div class="item">
-                <a href="##"><img class="img-circle center-block" src="./images/user/cxy2.jpg" alt="cat3"></a>
+                <a href="#"><img class="img-circle center-block" src="/sz/images/user/cxy2.jpg" alt="cat3"></a>
                 <div class="text-center">
                     <h2>打工仔--陈新尧</h2>
                     <p>团队骨干，后端设计，网页3D展示实现</p>
                 </div>
             </div>
             <div class="item">
-                <a href="##"><img class="img-circle center-block" src="./images/user/gjj.jpg" alt="cat4"></a>
+                <a href="##"><img class="img-circle center-block" src="/sz/images/user/gjj.jpg" alt="cat4"></a>
                 <div class="text-center">
                     <h2>打工仔--郭俊杰</h2>
                     <p>团队骨干，负责收集资料，界面设计，提供客户需求</p>
@@ -109,23 +118,21 @@
             </div>
 
             <div class="item">
-                <a href="##"><img class="img-circle center-block" src="./images/user/ljq2.jpg" alt="cat5"></a>
+                <a href="##"><img class="img-circle center-block" src="/sz/images/user/ljq2.jpg" alt="cat5"></a>
                 <div class="text-center">
                     <h2>打工仔--刘建强</h2>
                     <p>团队骨干，负责收集资料，后勤保障</p>
                 </div>
             </div>
-
         </div>
-
     </div>
 
-    <br><br><br>
+    <br><br><br><br><br>
     <div class="row text-center">
 
         <div class=" col-sm-6 text-right ">
             <br><br>
-            <img src="./images/city.png" alt="" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="/sz/images/city.png" alt="" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>化学&nbsp;&nbsp;&nbsp;&nbsp;</strong><br>
                 <span><strong aria-setsize="32">妙妙屋&nbsp;&nbsp;&nbsp;</strong></span></h1>
             <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;萤火虫Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
@@ -150,7 +157,6 @@
         </div>
     </div>
 </div>
-
 
 </body>
 <footer>
