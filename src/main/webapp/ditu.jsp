@@ -91,7 +91,7 @@
         </div>
     </div>
 </nav>
-
+<br><br><br><br>
 
 <div class="tree panel panel-default container" id="tree">
     <h1>化学物质地图</h1>
@@ -122,9 +122,10 @@
                     "name": "化学物质",
                     "parent": "化学物质结构展示",
                     "children": [
-                        {"name": "铁", "parent": "化学物质"},
-
-                        {"name": "铜", "parent": "化学物质"},
+                        {"name": "Ag", "parent": "化学物质"},
+                        {"name": "Au", "parent": "化学物质"},
+                        {"name": "Cu", "parent": "化学物质"},
+                        {"name": "Fe", "parent": "化学物质"}
 
                     ]
                 }

@@ -48,7 +48,7 @@
                         化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
                     <ul class="dropdown-menu  " role="menu">
                         <li><a href="/sz/user/show_qicai" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
-                        <li><a href="test_page1.html" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
+                        <li><a href="/sz/user/exam" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
                         <li><a href="/sz/user/share_knowledge" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
                         <li><a href="/sz/user/share_video" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
                     </ul>

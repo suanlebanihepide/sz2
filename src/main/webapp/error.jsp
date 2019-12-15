@@ -17,7 +17,7 @@
 <div class="container">
     <div class="text-center">
          <h1>登录失败</h1>
-        <a href="/sz/login.jsp">重新登录</a>
+        <a href="/sz/user/login">重新登录</a>
     </div>
 </div>
 </body>
