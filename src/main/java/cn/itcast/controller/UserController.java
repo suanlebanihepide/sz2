@@ -42,6 +42,12 @@ public class UserController {
         return "lab";
     }
 
+    @RequestMapping("/exam")
+    public String exam() {
+        return "exam";
+    }
+
+
 
     @RequestMapping("/ditu")
     public String ditu() {
