@@ -14,11 +14,7 @@
 <body>
 
 请求完成
-<c:forEach items="${list}" var="account">
-
-    ${account.name}
-
-</c:forEach>
+<h1>${id}</h1>
 
 </body>
 </html>

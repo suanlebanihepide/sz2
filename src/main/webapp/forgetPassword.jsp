@@ -54,8 +54,8 @@
                         <li><a href="show_qicai.jsp" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
                         <li><a href="class.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
                         <li><a href="knowledge.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
-                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
-                        <li><a href="share.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小课堂</span></a></li>
+                        <li><a href="share_knowledge.jsp" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
+                        <li><a href="share_knowledge.jsp" data-tab="tab-firefox"><span style="font-size: 18px">化学小课堂</span></a></li>
 
                     </ul>
                 </li>

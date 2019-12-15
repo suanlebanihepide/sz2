@@ -28,17 +28,17 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav ">
 
-                <li><a href="home.jsp" class="navbar-brand">首页&nbsp&nbsp&nbsp&nbsp</a></li>
+                <li><a href="/sz/user/home" class="navbar-brand">首页&nbsp&nbsp&nbsp&nbsp</a></li>
                 <li>
-                    <a href="#" class="navbar-brand">化学实验室&nbsp&nbsp&nbsp&nbsp</a>
+                    <a href="/sz/user/lab" class="navbar-brand">化学实验室&nbsp&nbsp&nbsp&nbsp</a>
                 </li>
 
                 <li class="dropdown ">
                     <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true" data-toggle="dropdown">
                         化学物质 &nbsp&nbsp&nbsp&nbsp<span class="caret"></span> </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="index.html" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
-                        <li><a href="index.html" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a></li>
+                        <li><a href="/sz/user/ditu" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
+                        <li><a href="/sz/user/ditu" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a></li>
                     </ul>
                 </li>
 
@@ -47,10 +47,10 @@
                        data-toggle="dropdown">
                         化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
                     <ul class="dropdown-menu  " role="menu">
-                        <li><a href="show_qicai.jsp" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
+                        <li><a href="/sz/user/show_qicai" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
                         <li><a href="test_page1.html" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
-                        <li><a href="knowledge.html" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
-                        <li><a href="share.html" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
+                        <li><a href="/sz/user/share_knowledge" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
+                        <li><a href="/sz/user/share_video" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
                     </ul>
                 </li>
 

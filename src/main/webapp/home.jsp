@@ -55,7 +55,7 @@
             <div class="content">
                 <h3>化学实验室</h3>
                 <p>在这里你将会进入一个虚拟的实验室中，你可以随心所欲去做任何你想到的化学实验不会有任何的危险，亲身体会到动手做实验的快乐</p>
-                <a href="#" class="button">前往</a>
+                <a href="/sz/user/lab" class="button">前往</a>
             </div>
         </section>
         <section class="spotlight">
@@ -73,7 +73,7 @@
                 <h3>化学物质</h3>
                 <p>在这里你可以通过3D的形式去查看化学有机物的构成，
                     去亲眼见识到一个化学有机分子的内部构成</p>
-                <a href="" class="button">前往</a>
+                <a href="/sz/user/ditu" class="button">前往</a>
             </div>
         </section>
         <section class="special">

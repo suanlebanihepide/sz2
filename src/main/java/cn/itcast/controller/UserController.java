@@ -7,11 +7,14 @@ package cn.itcast.controller;
 
 import cn.itcast.domain.User;
 import cn.itcast.service.UserService;
+import com.sun.org.apache.xalan.internal.xsltc.trax.XSLTCSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -24,14 +27,53 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping("/3d/{id}")
+    public String show_knowlege(@PathVariable("id")String id,
+                                Model model) {
+        model.addAttribute("id",id);
+        String str = userService.find_element(id).toString();
+        model.addAttribute("information",str);
+        System.out.println(str);
+        return "3d";
+    }
+
+    @RequestMapping("/lab")
+    public String lab() {
+        return "lab";
+    }
+
+
+    @RequestMapping("/ditu")
+    public String ditu() {
+        return "ditu";
+    }
+
+
+    @RequestMapping("/share_knowledge")
+    public String show_knowlege() {
+        return "share_knowledge";
+    }
+
+    @RequestMapping("/home")
+    public String home() {
+        return "home";
+    }
+
+    @RequestMapping("/share_video")
+    public String show_video() {
+        return "share_video";
+    }
+
     @RequestMapping("/show_qicai")
     public String show_qicai() {
         return "show_qicai";
     }
+
     @RequestMapping("/3d")
     public String show_3d() {
         return "3d";
     }
+
     @RequestMapping("/class")
     public String class_page() {
         return "class";
@@ -63,7 +105,6 @@ public class UserController {
         request.setAttribute("error", "用户名密码不正确");
         return "login";
     }
-
 
 
     @RequestMapping("/createUser")

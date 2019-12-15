@@ -23,6 +23,10 @@ public class UserServiceImpl implements UserService {
         System.out.println("业务层查询到信息");
         return userdao.findAll();
     }
+    //查找分子模型介绍信息
+    public  String find_element(String element){
+    return  userdao.find_element(element);
+    }
 
     public void addNewUser(User user) {
         System.out.println("添加新用户成功");

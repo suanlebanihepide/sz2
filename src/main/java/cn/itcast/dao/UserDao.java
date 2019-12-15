@@ -14,6 +14,10 @@ public interface UserDao {
     @Select("select * from user")
     public List<User> findAll();
 
+    //查找分子模型介绍信息
+    @Select("select information from chemistry where element_name like #{element}")
+    public  String find_element(String element);
+
     @Insert("insert into user (username,password,email) values(#{username},#{password},#{email})")
     //保存用户信息
     public void addNewUser(User user);

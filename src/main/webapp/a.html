@@ -1,27 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<%--
+Created by IntelliJ IDEA.
+User: shenzheng
+Date: 2019/12/11
+Time: 22:39
+To change this template use File | Settings | File Templates.
+--%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    　<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>化学物质展示</title>
+    <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+
+    </style>
 </head>
-<body>
-    aaaaaaaaa
-    <script>
-        $(function () {
-            $.ajax({
-                //请求方式
-                type : "GET",
-                //请求的媒体类型
-                contentType: "application/json;charset=UTF-8",
-                //请求地址
-                url : "/account/a",
-                //请求成功
-                success : function(result) {
-                    console.log(result);
-                }
-            });
-        })
-    </script>
+<body style="background-color: rgb(0,0,0)">
+
+<script src="/sz/js/three.js"></script>
+<script src="/sz/js/OrbitControls.js"></script>
+<script src="/sz/js/OBJLoader.js"></script>
+<script src="/sz/js/MTLLoader.js"></script>
+<script src="/sz/js/WebGL.js"></script>
+
+<div>
+
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href=""><span style="font-size: 25px">化学妙妙屋</span></a>
+        </div>
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ">
+
+                    <li><a href="home.html" class="navbar-brand">首页&nbsp&nbsp&nbsp&nbsp</a></li>
+                    <li>
+                        <a href="#" class="navbar-brand">化学实验室&nbsp&nbsp&nbsp&nbsp</a>
+                    </li>
+
+                    <li class="dropdown ">
+                        <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true" data-toggle="dropdown">
+                            化学物质 &nbsp&nbsp&nbsp&nbsp<span class="caret"></span> </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="index.html" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
+                            <li><a href="index.html" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown ">
+                        <a href="class.html" class=" navbar-brand dropdown-toggle" role="button" aria-haspopup="true"
+                           data-toggle="dropdown">
+                            化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
+                        <ul class="dropdown-menu  " role="menu">
+                            <li><a href="show_qicai.html" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
+                            <li><a href="test_page1.html" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
+                            <li><a href="knowledge.html" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
+                            <li><a href="share.html" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="about.html" class="navbar-brand">关于我们&nbsp&nbsp&nbsp&nbsp</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="col-md-offset-2"  style="color: red ;font-size: 20px">
+        C2H4化学中常见的有机物 <br>
+        与我们
+    </div>
+    <div>
+
+        <script >
+            var container,
+                camera,
+                scene,
+                renderer,
+                controls,
+                clock;
+
+            function init() {
+                container = document.createElement('div');
+                container.id = 'container';
+                document.body.appendChild(container);
+
+                renderer = new THREE.WebGLRenderer({
+                    antialias: true
+                });
+                renderer.setPixelRatio(window.devicePixelRatio);
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                container.appendChild(renderer.domElement);
+
+                scene = new THREE.Scene();
+                var gridHelper = new THREE.GridHelper(100, 10, 0x121c35, 0x121c35);
+                scene.add(gridHelper);
+
+                scene.add(new THREE.HemisphereLight(0xffffbb, 0x080820, 2));
+
+                camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 200);
+                camera.position.set(0, 50, 50);
+
+                controls = new THREE.OrbitControls(camera, container);
+                controls.autoRotate = true;
+                // var t1 = "mode/"+${id}.toString()+".mtl";
+                // var t2 = "/sz/model/"+${id}.toString()+".obj";
+                new THREE.MTLLoader().load("/sz/model/C2H4.mtl", function (materials) {
+                    materials.preload();
+                    new THREE.OBJLoader().setMaterials(materials).load("/sz/model/C2H4.obj", function (object) {
+                        scene.add(object);
+                        animate();
+                    });
+
+                });
+
+                window.addEventListener('resize', onWindowResize, false);
+            };
+            function onWindowResize() {
+                var w = window.innerWidth,
+                    h = window.innerHeight;
+                renderer.setSize(w, h);
+                camera.aspect = w / h;
+                camera.updateProjectionMatrix();
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                render();
+            }
+
+            function render() {
+                controls.update();
+                renderer.render(scene, camera);
+            }
+            init();
+        </script>
+    </div>
+
+</div>
+
 </body>
+
 </html>

@@ -16,12 +16,12 @@ public class SysInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        HttpSession session = request.getSession();
-        Object t=session.getAttribute("USER_SESSION");
-        if(t==null){
-            response.sendRedirect("/sz/user/test");
-            return false;
-        }
+//        HttpSession session = request.getSession();
+//        Object t=session.getAttribute("USER_SESSION");
+//        if(t==null){
+//            response.sendRedirect("/sz/user/test");
+//            return false;
+//        }
         return true;
     }
 }
