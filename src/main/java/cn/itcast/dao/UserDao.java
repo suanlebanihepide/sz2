@@ -18,6 +18,10 @@ public interface UserDao {
     @Select("select information from chemistry where element_name like #{element}")
     public  String find_element(String element);
 
+    //查找反应结果信息
+    @Select("select result from result where information like   #{element}  ")
+    public  String return_result(String element);
+
     @Insert("insert into user (username,password,email) values(#{username},#{password},#{email})")
     //保存用户信息
     public void addNewUser(User user);

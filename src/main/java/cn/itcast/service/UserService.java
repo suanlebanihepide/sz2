@@ -11,6 +11,9 @@ public interface UserService {
     //查找分子模型介绍信息
     public  String find_element(String element);
 
+    //查找反应结果信息
+    public  String return_result(String element);
+
     //保存用户信息
     public void addNewUser(User user);
 }

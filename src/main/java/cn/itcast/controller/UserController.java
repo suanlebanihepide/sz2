@@ -14,7 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import sun.applet.resources.MsgAppletViewer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -28,13 +30,28 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/3d/{id}")
-    public String show_knowlege(@PathVariable("id")String id,
+    public String show_knowledge(@PathVariable("id")String id,
                                 Model model) {
         model.addAttribute("id",id);
         String str = userService.find_element(id).toString();
         model.addAttribute("information",str);
         System.out.println(str);
         return "3d";
+    }
+
+    @RequestMapping("/aaa")
+    @ResponseBody
+    public String  aaa(@RequestParam("information") String information)
+    {
+        String str=userService.return_result(information);
+        System.out.println(information);
+
+        return str;
+    }
+    @RequestMapping("/a")
+    public String a()
+    {
+        return "a";
     }
 
     @RequestMapping("/lab")

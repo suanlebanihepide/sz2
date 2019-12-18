@@ -76,7 +76,7 @@
     <br><br><br>
     <div class="col-md-offset-2 col-md-8 " style="color: white ;font-size: 20px">
 
-        ${information};
+        ${information}
     </div>
 
     <div>

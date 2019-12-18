@@ -27,6 +27,11 @@ public class UserServiceImpl implements UserService {
     public  String find_element(String element){
     return  userdao.find_element(element);
     }
+    //查找反应结果信息
+    public  String return_result(String element){
+        return  userdao.return_result(element);
+    }
+
 
     public void addNewUser(User user) {
         System.out.println("添加新用户成功");
