@@ -56,7 +56,8 @@
         </div>
     </div>
 </nav>
-
+<br><br><br><br>
+<div class="container">
 <form name="form" method="post" action="">
     <div id="first">
         <pre><img src="/sz/images/test/page1_1.PNG"></pre><br>
@@ -96,7 +97,7 @@
         </ul>
     </nav>
 </div>
-
+</div>
 
 
 </body>

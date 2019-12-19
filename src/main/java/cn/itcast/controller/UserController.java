@@ -45,7 +45,7 @@ public class UserController {
     {
         String str=userService.return_result(information);
         System.out.println(information);
-
+        System.out.println(str);
         return str;
     }
     @RequestMapping("/a")

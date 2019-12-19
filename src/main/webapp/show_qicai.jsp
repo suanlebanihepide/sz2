@@ -22,7 +22,7 @@
     <header id="header">
         <h1>化学妙妙屋</h1>
         <p>常见的化学实验器材</p>
-        <h2><a href="/sz/home">返回首页</a></h2>
+        <h2><a href="/sz/user/home">返回首页</a></h2>
     </header>
     <section id="thumbnails">
         <article>

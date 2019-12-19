@@ -83,13 +83,13 @@
             <div class="col-md-6 col-sm-6 " id="bottoml">
                 <div><img src="/sz/images/class_image/lambda.svg"></div>
                 <br>
-                <a href="#" style="font-size: 40px;font-family: 'Algerian'">测试屋</a>
+                <a href="/sz/user/exam" style="font-size: 40px;font-family: 'Algerian'">测试屋</a>
                 <h2>这里你将会进行一系列的化学小测试从而提高你的知识水平，从而更好更快的超越别人拥有更多的化学知识</h2>
             </div>
             <div class="col-md-6 col-sm-6 ">
                 <div><img src="/sz/images/class_image/encryption.svg"></div>
                 <br>
-                <a href="#" style="font-size: 40px">趣味分享</a>
+                <a href="/sz/user/share_video" style="font-size: 40px">趣味分享</a>
                 <h2>这里你将会进行了解到许许多多有趣的化学实验，以视频方式去学习如何操作并且亲眼看到其梦幻的实验效果</h2>
             </div>
         </div>
@@ -98,13 +98,13 @@
     <div class="container">
         <div class="col-md-6 col-sm-6 " id="">
             <div><img src="/sz/images/class_image/federation.svg"></div>
-            <a href="#" style="font-size: 40px">化学知识科普</a>
+            <a href="/sz/user/share_knowledge" style="font-size: 40px">化学知识科普</a>
             <h2>这里你将会进行一系列的化学小测试从而提高你的知识水平，从而更好更快的超越别人拥有更多的化学知识</h2>
         </div>
 
         <div class="col-md-6 col-sm-6 " id="bottomr">
             <div><img src="/sz/images/class_image/identity.svg"></div>
-            <a href="show_qicai.jsp" style="font-size: 40px">化学器材展示</a>
+            <a href="/sz/user/show_qicai" style="font-size: 40px">化学器材展示</a>
             <h2>这里你将会进行一系列的化学小测试从而提高你的知识水平，从而更好更快的超越别人拥有更多的化学知识</h2>
         </div>
     </div>

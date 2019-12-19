@@ -62,7 +62,7 @@
 <div class="container">
 
     <div class="col-md-1 col-md-offset-0" >
-        <video id="video1"  height="540px" width="660px" src="/sz/video/FeandHcl.mp4">
+        <video id="video1"  height="540px" width="660px" src="/sz/video/FeHcl.mp4">
         </video>
     </div>
     <div style="background-color: rgb(31,31,31)">
@@ -121,20 +121,22 @@
                 <a  id="next1" ><img  class="img-circle" src="/sz/images/background.png" width="10px" alt=""></a>
                 <a  id="next2" ><img  class="img-circle" src="/sz/images/background.png" width="10px" alt=""></a>
                 <a  id="next3" ><img  class="img-circle" src="/sz/images/background.png" width="10px" alt=""></a>
-                <button type="button" id="tt" onclick="">确认</button>
+                <button type="button" id="tt" onclick=fun()>确认</button>
 
             </div>
         </div>
     </div>
 </div>
 
+<div class="col-md-5">
+    <img src="/sz/images/black.png" id="show" height="100px" alt="">
+</div>
+
+
 <script>
     var global="";
     var flag=1;
-    var t = document.getElementById("tt")
-    t.onclick=function (ev) {
-        alert(global);
-    }
+
     var f = document.getElementById("next1")
     f.onclick=function (ev) {
         flag=1;
@@ -186,24 +188,36 @@
 
     }
     function fun() {
+
+        var info=global.toString();
+        alert(info)
+        console.log(info)
         $.ajax({
             type:"post",
             url:"/sz/user/aaa",
             datatype: "json",
-            data:{"information":"e1 e2"},
+            data:{"information":info},
             success:function(data){
-                alert(data);
+
+
+               document.getElementById("show").src="/sz/images/result/"+data+".png";
+                var myVideo = document.getElementsByTagName('video')[0];
+                document.getElementById("video1").src="/sz/video/"+data+".mp4";
+                 myVideo.loop="loop";
+                myVideo.play();
+
+
             }
         })
     }
     function playPause() {
         var myVideo = document.getElementsByTagName('video')[0];
-        if(flag==2)
+        if(flag==3)
         {
             document.getElementById("video1").src="/sz/video/liquid.mp4";
         }
         else{
-            document.getElementById("video1").src= "/sz/video/FeandHcl.mp4";
+            document.getElementById("video1").src= "/sz/video/chose.mp4";
         }
         myVideo.play();
     }
