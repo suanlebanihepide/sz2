@@ -14,10 +14,11 @@
 </head>
 <body style="background-image: url(/sz/images/background.png)">
 <br><br><br>
-<div class="container">
+<div class="container col-md-offset-0">
     <div class="text-center">
-         <h1>登录失败</h1>
-        <a href="/sz/user/login">重新登录</a>
+         <h1>请求失败</h1>
+        <p>可能是因为用户名或者邮箱填写错误请重试</p>
+        <a href="/sz">返回初始界面</a>
     </div>
 </div>
 </body>

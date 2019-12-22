@@ -31,6 +31,21 @@ public class UserServiceImpl implements UserService {
     public  String return_result(String element){
         return  userdao.return_result(element);
     }
+    //返回测验答案
+    public  String return_answer(String page){
+        return userdao.return_answer(page);
+    }
+    // 修改密码
+    public  boolean update(User user){
+
+        return userdao.update(user);
+    }
+
+    //查询用户名是否存在
+    public  String check_username(String username){
+
+        return userdao.check_username(username);
+    }
 
 
     public void addNewUser(User user) {

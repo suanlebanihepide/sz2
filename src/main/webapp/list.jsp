@@ -9,12 +9,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
-</head>
-<body>
+    <title>创建用户</title>
+    <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
+    <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 
-请求完成
-<h1>${id}</h1>
+    <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url(/sz/images/background.png)">
+<br><br>
+<div class="col-md-offset-0 container text-center">
+    <h2>恭喜你创建用户成功</h2>
+    <a href="/sz">点击登录</a>
+</div>
 
 </body>
 </html>

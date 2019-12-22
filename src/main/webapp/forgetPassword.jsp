@@ -66,24 +66,30 @@
     </div>
 </nav>
 <br><br><br><br><br><br>
-<div class="container ">
-    <h1>新用户注册</h1>
+<div class="container col-md-offset-4">
+    <h1>忘记密码</h1>
     <br><br>
     <div style="width: 300px">
-        <form action="user/createUser" method="post">
-
+        <form action="user/updateUser" method="post">
 
             <div class="form-group">
+                <label >用户名:</label>
+                <input type="text" id="u" class="form-control"  name="username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
                 <label >邮箱:</label>
-                <input type="email" class="form-control" name="email" placeholder="请设置注册邮箱">
+                <input type="email" id="e1" class="form-control" onkeyup="checkEmail()" name="email" placeholder="请设置注册邮箱">
+                <span id="tishi1"></span>
             </div>
             <div class="form-group">
                 <label >密码:</label>
-                <input type="password" class="form-control" name="password" placeholder="请输入登录密码">
+                <input type="password" id="p1" class="form-control" name="password" onkeyup="checkPassword()" placeholder="密码需包含字母和数字至少六位">
+                <span id="tishi2"></span>
             </div>
             <div class="form-group">
                 <label >确认密码:</label>
-                <input type="password" class="form-control" name="password" placeholder="请输入登录密码">
+                <input type="password" id="p2" class="form-control" name="password2" onkeyup="checkpwd()"  placeholder="确保两次输入密码一致">
+                <span id="tishi3"></span>
             </div>
 
             <div class="form-check">
@@ -91,10 +97,63 @@
                     <input class="form-check-input" type="checkbox"> 同意用户协议
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary" disabled="true">Submit</button>
         </form>
     </div>
 </div>
+<script>
+
+        var flag1=0;
+        var flag2=0;
+        var flag3=0;
+    function checkEmail() {
+        var email = document.getElementById("e1");
+        var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        if (!myreg.test(email.value))
+        {
+            document.getElementById("tishi1").innerHTML = "<br><font color='red'>输入邮箱不合法</font>";
+            flag1=0;
+        }
+        else
+        {
+            document.getElementById("tishi1").innerHTML = "<br><font color='green'>输入邮箱正确</font>";
+            flag1=1;
+        }
+    }
+    function checkPassword() {
+        var pwd = document.getElementById("p1");
+        var myreg =new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$');
+        if (!myreg.test(pwd.value))
+        {
+            document.getElementById("tishi2").innerHTML = "<br><font color='red'>输入密码不合法</font>";
+            flag2=0;
+        }
+        else
+        {
+            document.getElementById("tishi2").innerHTML = "<br><font color='green'>输入密码有效</font>";
+            flag2=1;
+        }
+    }
+
+    function checkpwd() {
+        var t1 = document.getElementById("p1").value;
+
+        var t2 = document.getElementById("p2").value;
+        ;
+        if (t1 == t2) {
+            document.getElementById("tishi3").innerHTML = "<br><font color='green'>两次密码输入一致</font>";
+            flag3=1;
+            if(flag1&&flag2&&flag3){
+                document.getElementById("submit").disabled = false;
+            }
+
+        } else {
+            document.getElementById("tishi3").innerHTML = "<br><font color='red'>两次输入密码不一致!</font>";
+            flag3=0;
+        }
+    }
+
+</script>
 
 
 </body>

@@ -78,9 +78,9 @@
         </section>
         <section class="special">
             <ul class="icons labeled">
-                <li><span class="icon solid fa-code"><span class="label"><a href="">联系我们</a></span></span></li>
+                <li><span class="icon solid fa-code"><span class="label"><a href="/sz/user/about">联系我们</a></span></span></li>
                 <li><span class="icon solid fa-desktop"><span class="label"> <a
-                        href="about.jsp">关于我们</a> </span></span></li>
+                        href="/sz/user/about">关于我们</a> </span></span></li>
             </ul>
         </section>
     </div>

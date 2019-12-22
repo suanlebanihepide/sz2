@@ -46,8 +46,27 @@ public class UserController {
         String str=userService.return_result(information);
         System.out.println(information);
         System.out.println(str);
+       return str;
+    }
+
+    @RequestMapping("/check_username")
+    @ResponseBody
+    public String  check_username(@RequestParam("information") String information)
+    {
+        String str =userService.check_username(information);
+        System.out.println(str);
         return str;
     }
+
+    @RequestMapping("/return_answer")
+    @ResponseBody
+    public String  return_answer(@RequestParam("information") String information)
+    {
+        String str =userService.return_answer(information);
+        return str;
+    }
+
+
     @RequestMapping("/a")
     public String a()
     {
@@ -107,6 +126,8 @@ public class UserController {
         return "about";
     }
 
+
+
     @RequestMapping("/test")
     public String verify(@RequestParam("username") String username,
                          @RequestParam("password") String password,
@@ -120,11 +141,9 @@ public class UserController {
             System.out.println(user.toString());
             if (user.getPassword().equals(password) && user.getUsername().equals(username)) {
                 session.setAttribute("USER_SESSION", user);
-
                 return "home";
             }
         }
-
         request.setAttribute("error", "用户名密码不正确");
         return "login";
     }
@@ -151,6 +170,28 @@ public class UserController {
         userService.addNewUser(user);
         return "list";
     }
+
+    @RequestMapping("/updateUser")
+    public String update(@RequestParam("username") String username,
+                             @RequestParam("password") String password,
+                             @RequestParam("email") String email) {
+
+        //调用service的方法
+        User user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setUsername(username);
+        boolean flag = userService.update(user);
+        if(flag)
+        {
+            return "list2";
+        }
+        else
+        {
+            return "error";
+        }
+    }
+
 
 
 }

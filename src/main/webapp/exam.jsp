@@ -57,17 +57,17 @@
     </div>
 </nav>
 <br><br><br><br>
-<div class="container">
+<div class="container col-md-offset-2 col-md-8">
 <form name="form" method="post" action="">
     <div id="first">
-        <pre><img src="/sz/images/test/page1_1.PNG"></pre><br>
+        <pre><img id="img1" src="/sz/images/test/page1_1.PNG"></pre><br>
         A&nbsp;&nbsp;<input name="answar_1" type="radio"  value="A">&nbsp;&nbsp;&nbsp;&nbsp;
         B&nbsp;&nbsp;<input name="answar_1" type="radio"   value="B">&nbsp;&nbsp;&nbsp;&nbsp;
         C&nbsp;&nbsp;<input name="answar_1" type="radio"  value="C">&nbsp;&nbsp;&nbsp;&nbsp;
         D&nbsp;&nbsp;<input name="answar_1" type="radio"  value="D">&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
     <div id ="second">
-        <pre><img src="/sz/images/test/page1_2.PNG"></pre><br>
+        <pre><img id="img2" src="/sz/images/test/page1_2.PNG"></pre><br>
         A&nbsp;&nbsp;<input name="answar_2" type="radio" value="A">&nbsp;&nbsp;&nbsp;&nbsp;
         B&nbsp;&nbsp;<input name="answar_2" type="radio" value="B">&nbsp;&nbsp;&nbsp;&nbsp;
         C&nbsp;&nbsp;<input name="answar_2" type="radio" value="C">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -75,30 +75,93 @@
 
     </div>
     <div id="thrid">
-        <pre><img src="/sz/images/test/page1_3.PNG" ></pre><br>
+        <pre><img id="img3" src="/sz/images/test/page1_3.PNG" ></pre><br>
         A&nbsp;&nbsp;<input name="answar_3" type="radio" value="A">&nbsp;&nbsp;&nbsp;&nbsp;
         B&nbsp;&nbsp;<input name="answar_3" type="radio" value="B">&nbsp;&nbsp;&nbsp;&nbsp;
         C&nbsp;&nbsp;<input name="answar_3" type="radio" value="C">&nbsp;&nbsp;&nbsp;&nbsp;
         D&nbsp;&nbsp;<input name="answar_3" type="radio" value="D">&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
-    <input type="button" value="查看参考答案" onclick=showAnswer()>
-    <input type="button" name="Submit" value="提交" onclick="submit1()">
+    <div id="fourth">
+        <pre><img id="img4" src="/sz/images/test/page1_4.PNG" ></pre><br>
+        A&nbsp;&nbsp;<input name="answar_3" type="radio" value="A">&nbsp;&nbsp;&nbsp;&nbsp;
+        B&nbsp;&nbsp;<input name="answar_3" type="radio" value="B">&nbsp;&nbsp;&nbsp;&nbsp;
+        C&nbsp;&nbsp;<input name="answar_3" type="radio" value="C">&nbsp;&nbsp;&nbsp;&nbsp;
+        D&nbsp;&nbsp;<input name="answar_3" type="radio" value="D">&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div id="fifth">
+        <pre><img id="img5" src="/sz/images/test/page1_5.PNG" ></pre><br>
+        A&nbsp;&nbsp;<input name="answar_3" type="radio" value="A">&nbsp;&nbsp;&nbsp;&nbsp;
+        B&nbsp;&nbsp;<input name="answar_3" type="radio" value="B">&nbsp;&nbsp;&nbsp;&nbsp;
+        C&nbsp;&nbsp;<input name="answar_3" type="radio" value="C">&nbsp;&nbsp;&nbsp;&nbsp;
+        D&nbsp;&nbsp;<input name="answar_3" type="radio" value="D">&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
 </form>
-<div id="page">
+    <span id="tishi"></span><br>
+    <button onclick="return_answer()">查看参考答案</button>
+<div id="page" class="text-center">
     <nav>
         <ul class="pagination">
             <li class="disabled"><a href="#">&laquo;</a></li>
-            <li class="active"><a href="test_page1.html">1</a></li>
-            <li><a href="test_page2.html">2</a></li>
-            <li><a href="test_page3.html">3</a></li>
-            <li><a href="test_page4.html">4</a></li>
-            <li><a href="test_page5.html">5</a></li>
-            <li><a href="test_page2.html">&raquo;</a></li>
+            <li class="active"><a href="javascript:next1()">1</a></li>
+            <li><a href="javascript:next2()">2</a></li>
+            <li><a href="javascript:next3()">3</a></li>
+            <li><a href="">&raquo;</a></li>
         </ul>
     </nav>
 </div>
 </div>
 
+<script>
+    var flag=1;
+    function return_answer() {
+        var str = flag.toString();
+        $.ajax({
+            type: "post",
+            url: "/sz/user/return_answer",
+            datatype: "json",
+            data: {"information": str},
+            success: function (data) {
+                var str = data.toString();
+                document.getElementById("tishi").innerHTML = "<br>"+str;
+            }
+
+        })
+
+    }
+   function next1 (ev) {
+        flag = 1;
+        document.getElementById("img1").src = "/sz/images/test/page1_1.PNG";
+        document.getElementById("img2").src = "/sz/images/test/page1_2.PNG";
+        document.getElementById("img3").src = "/sz/images/test/page1_3.PNG";
+        document.getElementById("img4").src = "/sz/images/test/page1_4.PNG";
+        document.getElementById("img5").src = "/sz/images/test/page1_5.PNG";
+       document.getElementById("tishi").innerHTML = "";
+    }
+    function next2  (ev) {
+        flag = 2;
+        document.getElementById("img1").src = "/sz/images/test/page2_1.PNG";
+        document.getElementById("img2").src = "/sz/images/test/page2_2.PNG";
+        document.getElementById("img3").src = "/sz/images/test/page2_3.PNG";
+        document.getElementById("img4").src = "/sz/images/test/page2_4.PNG";
+        document.getElementById("img5").src = "/sz/images/test/page2_5.PNG";
+        document.getElementById("tishi").innerHTML = "";
+    }
+
+    function next3  (ev) {
+        flag = 3;
+        document.getElementById("img1").src = "/sz/images/test/page3_1.PNG";
+        document.getElementById("img2").src = "/sz/images/test/page3_2.PNG";
+        document.getElementById("img3").src = "/sz/images/test/page3_3.PNG";
+        document.getElementById("img4").src = "/sz/images/test/page3_4.PNG";
+        document.getElementById("img5").src = "/sz/images/test/page3_5.PNG";
+        document.getElementById("tishi").innerHTML = "";
+    }
+
+
+
+
+</script>
 
 </body>
 </html>

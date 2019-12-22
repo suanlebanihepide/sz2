@@ -25,4 +25,15 @@ public interface UserDao {
     @Insert("insert into user (username,password,email) values(#{username},#{password},#{email})")
     //保存用户信息
     public void addNewUser(User user);
+
+    @Select("select email from user where username like #{username}")
+    //查询用户名是否存在
+    public  String check_username(String username);
+
+    @Select("select answer from exam where page like #{page}")
+    //返回测验答案
+    public  String return_answer(String page);
+
+    @Insert("update  user  set password=#{password} where username=#{username} and email=#{email} ")
+    public  boolean update(User user);
 }
