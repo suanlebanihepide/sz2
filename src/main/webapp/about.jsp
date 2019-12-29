@@ -3,19 +3,22 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 20:02
-  To change this template use File | Settings | File Templates.
+ 该页面主要是对开发成员信息进行介绍，以及开发该项目所用的各项技术和框架信息
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>化学妙妙屋</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
+<%--为网页添加背景图片--%>
 <body style="background-image: url(/sz/images/background.png)">
+<%-- 加载网页界面中的导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -31,11 +34,14 @@
                 </li>
 
                 <li class="dropdown ">
-                    <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true" data-toggle="dropdown">
+                    <a href="#" class="navbar-brand dropdown-toggle" role="button" aria-haspopup="true"
+                       data-toggle="dropdown">
                         化学物质 &nbsp&nbsp&nbsp&nbsp<span class="caret"></span> </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/sz/user/ditu" data-tab="tab-chrome"> <span style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
-                        <li><a href="/sz/user/ditu" data-tab="tab-firefox"><span style="font-size: 18px">化学物质展示</span></a></li>
+                        <li><a href="/sz/user/ditu" data-tab="tab-chrome"> <span
+                                style="font-size: 18px">化学有机物3D结构展示</span> </a></li>
+                        <li><a href="/sz/user/ditu" data-tab="tab-firefox"><span
+                                style="font-size: 18px">化学物质展示</span></a></li>
                     </ul>
                 </li>
 
@@ -44,10 +50,14 @@
                        data-toggle="dropdown">
                         化学小课堂&nbsp&nbsp&nbsp&nbsp <span class="caret"></span></a>
                     <ul class="dropdown-menu  " role="menu">
-                        <li><a href="/sz/user/show_qicai" data-tab="tab-chrome"><span style="font-size: 18px">化学器材展示</span></a></li>
-                        <li><a href="/sz/user/exam" data-tab="tab-firefox"><span style="font-size: 18px">化学小测试</span></a></li>
-                        <li><a href="/sz/user/share_knowledge" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a></li>
-                        <li><a href="/sz/user/share_video" data-tab="tab-firefox"><span style="font-size: 18px">趣味分享</span></a></li>
+                        <li><a href="/sz/user/show_qicai" data-tab="tab-chrome"><span
+                                style="font-size: 18px">化学器材展示</span></a></li>
+                        <li><a href="/sz/user/exam" data-tab="tab-firefox"><span
+                                style="font-size: 18px">化学小测试</span></a></li>
+                        <li><a href="/sz/user/share_knowledge" data-tab="tab-firefox"><span style="font-size: 18px">化学知识科普</span></a>
+                        </li>
+                        <li><a href="/sz/user/share_video" data-tab="tab-firefox"><span
+                                style="font-size: 18px">趣味分享</span></a></li>
                     </ul>
                 </li>
 
@@ -63,6 +73,7 @@
     <div></div>
 </div>
 <br><br><br>
+<%--设置网页中的轮播图，轮播内容为成员的相关介绍以及成员的个人头像图片信息--%>
 <div class="center-block container">
     <div id="slidershow" class="carousel slide" data-ride="carousel" data-interval=2000 data-pause="hover"
          data-wrap="true" style="margin-top: 5rem; width: 50%;height: 50%; margin-left:auto; margin-right:auto;">
@@ -119,6 +130,8 @@
     </div>
 
     <br><br><br><br><br>
+    <%--    添加项目的开发信息例如网页开发使用了哪些技术，哪些框架
+            添加项目开发人员的相关联系方式--%>
     <div class="row text-center">
 
         <div class=" col-sm-6 text-right ">

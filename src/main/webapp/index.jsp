@@ -3,15 +3,17 @@
   User: Lenovo
   Date: 2019/12/1
   Time: 14:24
-  To change this template use File | Settings | File Templates.
+    进入该网页的欢迎界面
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>化学妙妙屋</title>
+<%--    加载Bootstrap CSS文件--%>
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
+<%--网页的欢迎界面，加载欢迎动画与链接--%>
 <div class=" text-center" style="background: url(./images/welcome_di.png); background-repeat: no-repeat; background-size: 100%">
 
     <span class="center-block"><img src="./images/welcome_background.gif" alt=""  height="400px"/></span>

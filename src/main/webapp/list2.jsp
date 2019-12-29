@@ -3,7 +3,7 @@
   User: shenzheng
   Date: 2019/12/22
   Time: 0:12
-  To change this template use File | Settings | File Templates.
+  忘记密码修改成功界面
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

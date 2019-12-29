@@ -3,7 +3,8 @@
   User: shenzheng
   Date: 2019/12/11
   Time: 22:39
-  To change this template use File | Settings | File Templates.
+   该页面的主要功能是通过JS获取到后台提供的3D模型的.obj和.mtl文件的路径，通过加载指定路径文件，获取到对应3D模型
+   然后利用WebGL实现在网页上有机物结构式的3D结构模型展示
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
@@ -23,7 +24,7 @@
     </style>
 </head>
 <body style="background-color: rgb(0,0,0)">
-
+<%--导入界面所需要的webGL文件以及相关的其他js文件--%>
 <script src="/sz/js/three.js"></script>
 <script src="/sz/js/OrbitControls.js"></script>
 <script src="/sz/js/OBJLoader.js"></script>
@@ -32,6 +33,7 @@
 
 <div>
 
+<%-- 加载网页界面中的导航条--%>
     <nav class="navbar  navbar-inverse navbar-fixed-top">
 
         <div class="navbar-header">
@@ -74,8 +76,10 @@
     </nav>
 
     <br><br><br>
+<%--    利用Bootstarp的栅格系统修改该模块也网页中显示的位置--%>
     <div class="col-md-offset-2 col-md-8 " style="color: white ;font-size: 20px">
-
+<%--获取到后台model从数据库中查找到的关于该化学物质的相关信息介绍，将查询到的信息添加到ModelandView对象中
+在前端界面获取到该属性的值并进行显示--%>
         ${information}
     </div>
 
@@ -112,7 +116,7 @@
 
                 controls = new THREE.OrbitControls(camera, container);
                 controls.autoRotate = true;
-
+                //加载指定3D模型文件并进行显示
                 new THREE.MTLLoader().load('/sz/model/${id}.mtl', function (materials) {
                     materials.preload();
                     new THREE.OBJLoader().setMaterials(materials).load('/sz/model/${id}.obj', function (object) {
@@ -121,10 +125,10 @@
                     });
 
                 });
-
+                //为显示窗口添加事件的监听器
                 window.addEventListener('resize', onWindowResize, false);
             };
-
+            //修改显示窗口的大小
             function onWindowResize() {
                 var w = window.innerWidth,
                     h = window.innerHeight;

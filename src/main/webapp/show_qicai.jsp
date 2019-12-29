@@ -3,7 +3,7 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 20:00
-  To change this template use File | Settings | File Templates.
+  该页面主要用来展示相关的化学器材，以及化学器材的使用方法和注意事项的相关信息
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,13 +11,13 @@
 <head>
     <title>化学妙妙屋</title>
     <meta charset="utf-8" />
-
+<%--    加载网页相关的CSS文件--%>
     <link rel="stylesheet" href="/sz/css/assets2/css/main.css" />
     <noscript><link rel="stylesheet" href="/sz/css/assets2/css/noscript.css" /></noscript>
 </head>
 <body class=" is-preload-0 is-preload-2">
 <div id="main">
-
+<%--加载各类的化学器材大图，以及在右侧显示缩略图信息，在左侧大图中显示相关的器材的使用方法和注意事项--%>
 
     <header id="header">
         <h1>化学妙妙屋</h1>

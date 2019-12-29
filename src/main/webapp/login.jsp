@@ -3,7 +3,7 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 18:49
-  To change this template use File | Settings | File Templates.
+  登录界面
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,6 +12,7 @@
     <title>化学妙妙屋</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <%--    加载相关的CSS文件--%>
     <link rel="stylesheet" href="/sz/css/assets/css/main.css"/>
     <noscript>
         <link rel="stylesheet" href="/sz/css/assets/css/noscript.css"/>
@@ -29,6 +30,8 @@
             <h1>化学妙妙屋</h1>
         </header>
         <footer>
+            <%--            提示用输入用户名和密码，当用的添加提交后，控制层根据提交的信息利用后台去查找数据库中的信息
+                    若存在该用户名和密码记录则登录成功到后续页面否则在当前页面提示用户密码不正确--%>
             <form action="/sz/user/test" method="post">
 
                 <div style="color: red">${error}</div>

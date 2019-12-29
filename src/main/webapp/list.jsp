@@ -3,13 +3,14 @@
   User: Lenovo
   Date: 2019/12/1
   Time: 14:23
-  To change this template use File | Settings | File Templates.
+ 该页面为用户成功登录界面
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>创建用户</title>
+<%--    加载Bootstrap相关文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 

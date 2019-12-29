@@ -3,17 +3,19 @@
   User: shenzheng
   Date: 2019/12/14
   Time: 23:58
-  To change this template use File | Settings | File Templates.
+  该页面主要是化学物质地图介绍，提供相关的化学有机物和化学物质信息
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>化学物质展示</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
+    <%--   设置页面中化学物质地图显示的结点的外观形状信息--%>
     <style>
         .node {
             cursor: pointer;
@@ -51,6 +53,7 @@
     </style>
 </head>
 <body style="background-image: url(/sz/images/background.png)">
+<%--加载导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -96,7 +99,7 @@
 <div class="tree panel panel-default container" id="tree">
     <h1>化学物质地图</h1>
 </div>
-
+<%--利用NodeJS建立化学物质地图，类似于一个树状结构的地图，通过点击对应的叶子节点，显示不用化学物质的3D模型--%>
 
 <script type="text/javascript" src="/sz/js/d3.min.js"></script>
 <script type="text/javascript">
@@ -284,7 +287,7 @@
 
         });
     }
-
+    //当点击到叶子结点时的响应函数，加载3D模型重新打开一个新的页面进行显示
     function click(d) {
 
         var a = d.name;

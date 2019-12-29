@@ -3,19 +3,22 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 20:02
-  To change this template use File | Settings | File Templates.
+  化学小知识分享页面
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>化学知识科普</title>
+<%--    加载Bootstrap相关CSS jQuery JS文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
+<%--修改背景图片--%>
 <body style="background-image: url(/sz/images/background.png)">
 <br><br><br><br>
+<%--加载网页导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -57,7 +60,7 @@
     </div>
 </nav>
 
-
+<%--利用列表组合在网页上显示化学小知识的相关信息--%>
 <div class="container">
     <div class="panel panel-default">
 

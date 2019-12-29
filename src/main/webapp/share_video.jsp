@@ -3,13 +3,14 @@
   User: shenzheng
   Date: 2019/12/11
   Time: 23:07
-  To change this template use File | Settings | File Templates.
+ 趣味化学视频的分享展示页面
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>趣味分享</title>
+<%--    加载Bootstrap相关的CSS jQuery js 文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
@@ -31,7 +32,9 @@
     </style>
 
 </head>
+<%--修改网页背景图片--%>
 <body style="background-image: url(/sz/images/background.png)">
+<%--加载网页导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -72,7 +75,7 @@
         </div>
     </div>
 </nav>
-
+<%--以列表的形式在网页显示趣味分享的相关视频和视频介绍的内容--%>
 <br><br><br>
 <div class="container  panel panel-default">
     <div class="panel-body">

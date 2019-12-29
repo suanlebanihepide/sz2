@@ -3,22 +3,20 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 20:01
-  To change this template use File | Settings | File Templates.
+  该页面主要是化学小课堂的内容介绍
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>化学物质</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
-
-
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
-
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body >
-
+<%-- 加载网页界面中的导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -60,9 +58,9 @@
     </div>
 </nav>
 
-
+<%--设计项目开发化学小课堂内的四个模块的介绍界面，主要介绍四个模块的功能以及各模块进入链接--%>
 <div style="background-color: rgb(249,249,249);">
-
+<%--    化学小课堂内容以及样式--%>
     <div class="jumbotron" style=" height: 700px ;background-size: 100%;background-image: url(/sz/images/class_bgc.png);">
         <div class="lead lead">
             <div class="container">
@@ -77,7 +75,7 @@
         <h1 style="font-weight: bold">我们的课堂</h1>
         <br><br><br>
     </div>
-
+    <%--    测试屋内容以及样式--%>
     <div class=" container">
         <div class="pricing">
             <div class="col-md-6 col-sm-6 " id="bottoml">
@@ -95,12 +93,14 @@
         </div>
     </div>
     <br><br><br><br><br>
+    <%--    化学知识科普内容以及样式--%>
     <div class="container">
         <div class="col-md-6 col-sm-6 " id="">
             <div><img src="/sz/images/class_image/federation.svg"></div>
             <a href="/sz/user/share_knowledge" style="font-size: 40px">化学知识科普</a>
             <h2>这里你将会进行一系列的化学小测试从而提高你的知识水平，从而更好更快的超越别人拥有更多的化学知识</h2>
         </div>
+        <%--    化学器材展示以及样式--%>
 
         <div class="col-md-6 col-sm-6 " id="bottomr">
             <div><img src="/sz/images/class_image/identity.svg"></div>

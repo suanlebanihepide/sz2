@@ -3,7 +3,7 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 18:40
-  To change this template use File | Settings | File Templates.
+ 项目的主界面，主要介绍了项目的三个的功能，化学实验室，化学物质，化学小课堂以及其相关信息
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,6 +12,7 @@
     <title>化学妙妙屋</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<%--    加载本网页CSS样式--%>
     <link rel="stylesheet" href="/sz/css/assets3/css/main.css"/>
     <noscript>
         <link rel="stylesheet" href="/sz/css/assets3/css/noscript.css"/>
@@ -47,7 +48,7 @@
     </ul>
 </section>
 
-<!-- Two -->
+<%--以列表的形式介绍了项目三个大模块的相关信息--%>
 <section id="two" class="wrapper">
     <div class="inner alt">
         <section class="spotlight">
@@ -98,7 +99,7 @@
         售后服务：021-65189<br/>
     </div>
 </footer>
-
+<%--导入该网页相关JS文件--%>
 <!-- Scripts -->
 <script src="/sz/css/assets3/js/jquery.min.js"></script>
 <script src="/sz/css/assets3/js/jquery.scrolly.min.js"></script>

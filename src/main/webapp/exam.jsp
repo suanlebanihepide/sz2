@@ -3,19 +3,22 @@
   User: shenzheng
   Date: 2019/12/15
   Time: 15:59
-  To change this template use File | Settings | File Templates.
+  该页面的主要功能是用来提供化学小课堂的试题测试功能
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>测试屋</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
     <script src="/sz/css/bootstrap/js/jquery.min.js"></script>
 
     <script src="/sz/css/bootstrap/js/bootstrap.min.js"></script>
 </head>
+<%--修改页面背景图片--%>
 <body style="background-image: url(/sz/images/background.png)">
+<%--加载页面导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -56,6 +59,7 @@
         </div>
     </div>
 </nav>
+<%--提供试题功能，以列表的形式将试题在界面进行显示--%>
 <br><br><br><br>
 <div class="container col-md-offset-2 col-md-8">
 <form name="form" method="post" action="">
@@ -112,6 +116,9 @@
 </div>
 </div>
 
+
+<%--查看试题答案功能，当用户点击该按钮后，WEB前端页面将发送AJAX请求到后端，后端控制层将获取的请求，按照该请求
+去查询后台已经连接好的数据库时，获取到后台数据库中存储的试题答案，将答案返回给前端界面，在界面上进行显示--%>
 <script>
     var flag=1;
     function return_answer() {
@@ -129,6 +136,7 @@
         })
 
     }
+   // 点击按钮修改试题
    function next1 (ev) {
         flag = 1;
         document.getElementById("img1").src = "/sz/images/test/page1_1.PNG";

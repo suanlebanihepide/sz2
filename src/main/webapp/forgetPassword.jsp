@@ -3,13 +3,14 @@
   User: shenzheng
   Date: 2019/12/1
   Time: 18:51
-  To change this template use File | Settings | File Templates.
+  该页面主要是用来更新用户密码所用
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>用户注册</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
 
     <script src="./css/bootstrap/js/jquery.min.js"></script>
@@ -22,7 +23,9 @@
 
     </style>
 </head>
+<%--修改网页背景图片--%>
 <body style="background-image: url(./images/background.png)">
+<%--加载网页导航条--%>
 <nav class="navbar  navbar-inverse navbar-fixed-top">
 
     <div class="navbar-header">
@@ -66,6 +69,7 @@
     </div>
 </nav>
 <br><br><br><br><br><br>
+<%--利用输入框获取到用户输入的相关信息--%>
 <div class="container col-md-offset-4">
     <h1>忘记密码</h1>
     <br><br>
@@ -106,6 +110,7 @@
         var flag1=0;
         var flag2=0;
         var flag3=0;
+    //    检测用户输入邮箱格式的合法性
     function checkEmail() {
         var email = document.getElementById("e1");
         var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
@@ -120,6 +125,7 @@
             flag1=1;
         }
     }
+    //检测用户输入密码的合法性，是否符合定义的规则
     function checkPassword() {
         var pwd = document.getElementById("p1");
         var myreg =new RegExp('^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$');
@@ -134,7 +140,7 @@
             flag2=1;
         }
     }
-
+    //检测两次输入密码的是否一致
     function checkpwd() {
         var t1 = document.getElementById("p1").value;
 

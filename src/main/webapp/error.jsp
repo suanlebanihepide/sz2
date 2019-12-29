@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>化学妙妙屋</title>
+    <%--    导入Boostrap的相关CSS jQuery JS等文件--%>
     <link rel="stylesheet" href="/sz/css/bootstrap/css/bootstrap.min.css">
 </head>
 <body style="background-image: url(/sz/images/background.png)">
